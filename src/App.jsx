@@ -1,7 +1,9 @@
 import "./App.css";
 import Banner from "./components/banner/Banner";
+import MainSection from "./components/mainSection/MainSection";
 import Navbar from "./components/Navbar/Navbar";
 import Stats from "./components/stats/Stats";
+import Steps from "./components/steps/Steps";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
       <Stats></Stats>
+      <MainSection></MainSection>
+      <Steps></Steps>
     </>
   );
 }

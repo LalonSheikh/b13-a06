@@ -3,7 +3,7 @@ import { CiShoppingCart } from "react-icons/ci";
 
 const Navbar = () => {
   return (
-    <div className="container  mx-auto my-[50px] ">
+    <div className="container  mx-auto my-[50px] font-sans ">
       <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">

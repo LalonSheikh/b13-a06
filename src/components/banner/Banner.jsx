@@ -4,7 +4,7 @@ import { GrStatusGoodSmall } from "react-icons/gr";
 
 const Banner = () => {
   return (
-    <div className="container  mx-auto my-[50px] ">
+    <div className="container  mx-auto my-[50px] font-sans">
       <div className="hero my-4  ">
         <div className="hero-content  flex-col lg:flex-row-reverse">
           <img
@@ -17,7 +17,7 @@ const Banner = () => {
               <GrStatusGoodSmall />
               New: AI-Powered Tools Available
             </p>
-            <h1 className="text-5xl font-bold text-[#101727]">
+            <h1 className="text-7xl font-bold text-[#101727]">
               Supercharge Your <br /> Digital Workflow
             </h1>
             <p className="py-6 text-[#101727]">
