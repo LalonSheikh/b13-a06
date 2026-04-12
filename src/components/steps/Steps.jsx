@@ -3,7 +3,7 @@ import React from "react";
 const Steps = () => {
   return (
     <div>
-      <div className="flex justify-center items-center container  mx-auto my-[70px] font-sans">
+      <div className="flex items-center justify-center container  mx-auto my-[70px] font-sans">
         <div>
           <h2 className="font-black text-center text-5xl">
             Get Started in 3 Steps
@@ -13,7 +13,7 @@ const Steps = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-1 lg:justify-center items-center container  mx-auto gap-3 my-[50px] font-sans">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container  mx-auto gap-3 my-[50px] font-sans">
         <div className="card bg-base-100 w-96 shadow-sm">
           <p className="text-right text-[#4F39F6] font-black ">01</p>
           <figure className="px-10 pt-10">

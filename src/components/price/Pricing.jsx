@@ -3,7 +3,7 @@ import React from "react";
 const Pricing = () => {
   return (
     <div>
-      <div className="flex justify-center lg:flex-col items-center container  mx-auto my-[70px] font-sans">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container  mx-auto my-[70px] font-sans">
         <div>
           <h2 className="font-black text-center text-5xl">
             Simple, Transparent Pricing

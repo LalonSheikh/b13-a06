@@ -1,9 +1,13 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import DigiTools from "./DigiTools";
+import SelectedCart from "./SelectedCart";
 
 const MainSection = ({ digiToolsPromise }) => {
   const digiTools = use(digiToolsPromise);
-  console.log(digiTools);
+
+  const [selectedProduct, setSelectedProduct] = useState("product");
+
+  console.log(selectedProduct, "SelectedProduct");
   return (
     <div>
       <div className="flex justify-center items-center container  mx-auto my-[50px] font-sans">
@@ -19,17 +23,33 @@ const MainSection = ({ digiToolsPromise }) => {
           </p>
           <div className="text-center space-x-2 py-3">
             {" "}
-            <button className="btn text-center bg-[#4F39F6] text-white rounded-4xl my-2">
+            <button
+              onClick={() => setSelectedProduct("product")}
+              className={`btn text-center ${selectedProduct === "product" ? "bg-[#4F39F6] " : " bg-blue-200 text-black"} text-white rounded-4xl my-2`}
+            >
               Products
             </button>
-            <button className="btn btn-outline  text-[#4F39F6] border-none rounded-4xl text-xl text-black font-bold ml-2 my-2">
+            <button
+              onClick={() => setSelectedProduct("cart")}
+              className={`btn text-center ${
+                selectedProduct === "cart"
+                  ? "bg-[#4F39F6] "
+                  : "bg-blue-200 text-black"
+              } text-white rounded-4xl my-2`}
+            >
               Cart()
             </button>
           </div>
         </div>
       </div>
+{
+  selectedProduct === "product" ?  <DigiTools
+        digiTools={digiTools}
+        selectedProduct={selectedProduct}
+      ></DigiTools>: <SelectedCart></SelectedCart>
+}
 
-      <DigiTools digiTools={digiTools}></DigiTools>
+     
     </div>
   );
 };
