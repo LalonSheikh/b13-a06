@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import Footer from "./components/footer/Footer";
@@ -7,17 +8,26 @@ import Pricing from "./components/price/Pricing";
 import Stats from "./components/stats/Stats";
 import Steps from "./components/steps/Steps";
 
+const fetchDigiTools = async () => {
+  const res = await fetch("/data.json");
+  return res.json();
+};
+
 function App() {
+  const digiToolsPromise = fetchDigiTools();
   return (
     <>
-      {/* <h2 className="bg-orange-500">Hello digitools</h2> */}
-      <Navbar></Navbar>
-      <Banner></Banner>
-      <Stats></Stats>
-      <MainSection></MainSection>
-      <Steps></Steps>
-      <Pricing></Pricing>
-      <Footer></Footer>
+      <Suspense
+        fallback={<span className="loading loading-spinner loading-xl"></span>}
+      >
+        <Navbar></Navbar>
+        <Banner></Banner>
+        <Stats></Stats>
+        <MainSection digiToolsPromise={digiToolsPromise}></MainSection>
+        <Steps></Steps>
+        <Pricing></Pricing>
+        <Footer></Footer>
+      </Suspense>
     </>
   );
 }

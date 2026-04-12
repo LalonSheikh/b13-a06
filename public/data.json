@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes with modern templates and ATS optimization.",
+    "price": 9.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "FaFileAlt"
+  },
+  {
+    "id": 2,
+    "name": "Portfolio Maker",
+    "description": "Build stunning personal portfolios without coding.",
+    "price": 19.99,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Custom domains", "Responsive design", "SEO optimized"],
+    "icon": "FaUserTie"
+  },
+  {
+    "id": 3,
+    "name": "Invoice Generator",
+    "description": "Generate and manage invoices for your business easily.",
+    "price": 4.99,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Unlimited invoices", "PDF download", "Client management"],
+    "icon": "FaFileInvoice"
+  },
+  {
+    "id": 4,
+    "name": "E-commerce Starter Kit",
+    "description": "Launch your online store quickly with pre-built features.",
+    "price": 49.99,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Product management", "Payment integration", "Admin dashboard"],
+    "icon": "FaShoppingCart"
+  },
+  {
+    "id": 5,
+    "name": "Social Media Scheduler",
+    "description": "Schedule and automate posts across multiple platforms.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Multi-platform support", "Auto posting", "Analytics"],
+    "icon": "FaCalendarAlt"
+  },
+  {
+    "id": 6,
+    "name": "Fitness Tracker App",
+    "description": "Track workouts, calories, and health progress.",
+    "price": 29.99,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Workout plans", "Calorie tracking", "Progress reports"],
+    "icon": "FaDumbbell"
+  },
+  {
+    "id": 7,
+    "name": "Online Course Platform",
+    "description": "Create and sell courses with ease.",
+    "price": 99.99,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Video hosting", "Student management", "Certificates"],
+    "icon": "FaChalkboardTeacher"
+  },
+  {
+    "id": 8,
+    "name": "Email Marketing Tool",
+    "description": "Design and send email campaigns effectively.",
+    "price": 12.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Drag-drop builder", "Automation", "Analytics"],
+    "icon": "FaEnvelope"
+  },
+  {
+    "id": 9,
+    "name": "Task Management App",
+    "description": "Organize your tasks and boost productivity.",
+    "price": 6.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Kanban board", "Team collaboration", "Reminders"],
+    "icon": "FaTasks"
+  },
+  {
+    "id": 10,
+    "name": "Cloud Storage Service",
+    "description": "Securely store and access your files anywhere.",
+    "price": 59.99,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["100GB storage", "File sharing", "Data encryption"],
+    "icon": "FaCloud"
+  }
+]

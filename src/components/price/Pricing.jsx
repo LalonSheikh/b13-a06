@@ -13,7 +13,7 @@ const Pricing = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center container  mx-auto my-[70px] font-sans">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center px-5 items-center container  mx-auto my-[70px] font-sans">
         <div className="card w-96 bg-base-100 shadow-sm">
           <div className="card-body">
             <div className="">
@@ -136,7 +136,9 @@ const Pricing = () => {
         </div>
         <div className="card w-96 bg-blue-600 shadow-sm">
           <div className="card-body">
-            <span className="badge badge-xl badge-warning">Most Popular</span>
+            <span className="badge badge-xl font-bold text-white badge-warning">
+              Most Popular
+            </span>
             <div className="">
               <h2 className="text-3xl font-bold">Pro</h2>
               <p>Best for Professional</p>
@@ -257,7 +259,7 @@ const Pricing = () => {
         </div>
         <div className="card w-96 bg-base-100 shadow-sm">
           <div className="card-body">
-            <div className="flex justify-between">
+            <div className="">
               <h2 className="text-3xl font-bold">Enterprise</h2>
               <p>For team and Business</p>
               <span className="text-2xl font-bold my-8 ">
