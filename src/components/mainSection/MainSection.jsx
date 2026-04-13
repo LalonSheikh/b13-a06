@@ -2,7 +2,7 @@ import React, { use, useState } from "react";
 import DigiTools from "./DigiTools";
 import SelectedCart from "./SelectedCart";
 
-const MainSection = ({ digiToolsPromise }) => {
+const MainSection = ({ digiToolsPromise, setTotalCount, totalCount }) => {
   const digiTools = use(digiToolsPromise);
 
   const [selectedProduct, setSelectedProduct] = useState("product");
@@ -42,14 +42,16 @@ const MainSection = ({ digiToolsPromise }) => {
           </div>
         </div>
       </div>
-{
-  selectedProduct === "product" ?  <DigiTools
-        digiTools={digiTools}
-        selectedProduct={selectedProduct}
-      ></DigiTools>: <SelectedCart></SelectedCart>
-}
-
-     
+      {selectedProduct === "product" ? (
+        <DigiTools
+          digiTools={digiTools}
+          selectedProduct={selectedProduct}
+          setTotalCount={setTotalCount}
+          totalCount={totalCount}
+        ></DigiTools>
+      ) : (
+        <SelectedCart></SelectedCart>
+      )}
     </div>
   );
 };
