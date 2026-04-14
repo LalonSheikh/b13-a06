@@ -36,8 +36,10 @@ const DigiTools = ({
   setTotalCount,
   selectedProduct,
   totalCount,
+  selectedTools,
+  setSelectedTools,
 }) => {
-  console.log("DigiTools", digiTools);
+  // console.log("DigiTools", digiTools);
 
   return (
     <div className="container mx-auto">
@@ -50,7 +52,7 @@ const DigiTools = ({
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {digiTools.map((digiTool) => {
           const Icon = icons[digiTool.icon];
-          console.log(digiTool);
+          // console.log(digiTool);
           return (
             <DigiTool
               Icon={Icon}
@@ -59,6 +61,8 @@ const DigiTools = ({
               setTotalCount={setTotalCount}
               totalCount={totalCount}
               key={digiTool.id}
+              selectedTools={selectedTools}
+              setSelectedTools={setSelectedTools}
             ></DigiTool>
           );
         })}

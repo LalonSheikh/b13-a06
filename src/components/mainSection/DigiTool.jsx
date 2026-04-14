@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 
-const DigiTool = ({ digiTool, Icon, tagColors, setTotalCount, totalCount }) => {
+const DigiTool = ({
+  digiTool,
+  Icon,
+  tagColors,
+  setTotalCount,
+  totalCount,
+  selectedTools,
+  setSelectedTools,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
   console.log(totalCount);
 
   const handleSetTool = () => {
+    alert(`${digiTool.name} is selected`);
     setIsSelected(true);
-    setTotalCount(prev => prev + 1);
+    setTotalCount((prev) => prev + 1);
     // setTotalCount(+5);
+    setSelectedTools([...selectedTools, digiTool]);
   };
 
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { CiShoppingCart } from "react-icons/ci";
 
-const Navbar = ({totalCount}) => {
+const Navbar = ({ totalCount }) => {
   return (
     <div className="container  mx-auto my-[50px] font-sans ">
       <div className="navbar bg-base-100 shadow-sm">
@@ -70,8 +70,11 @@ const Navbar = ({totalCount}) => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end gap-3 flex font-semibold">
-          <CiShoppingCart /> {totalCount}
+        <div className="navbar-end gap-3  flex font-semibold">
+          <CiShoppingCart />{" "}
+          <span className="text-xl font-bold">
+            {totalCount}/{10}
+          </span>
           <p>Login</p>
           <a className="btn bg-[#4F39F6] text-white rounded-4xl">Get Started</a>
         </div>

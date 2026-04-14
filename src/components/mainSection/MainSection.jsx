@@ -6,8 +6,8 @@ const MainSection = ({ digiToolsPromise, setTotalCount, totalCount }) => {
   const digiTools = use(digiToolsPromise);
 
   const [selectedProduct, setSelectedProduct] = useState("product");
-
-  console.log(selectedProduct, "SelectedProduct");
+  const [selectedTools, setSelectedTools] = useState([]);
+  // console.log(selectedProduct, "SelectedProduct");
   return (
     <div>
       <div className="flex justify-center items-center container  mx-auto my-[50px] font-sans">
@@ -37,7 +37,7 @@ const MainSection = ({ digiToolsPromise, setTotalCount, totalCount }) => {
                   : "bg-blue-200 text-black"
               } text-white rounded-4xl my-2`}
             >
-              Cart()
+              Cart({totalCount})
             </button>
           </div>
         </div>
@@ -48,9 +48,12 @@ const MainSection = ({ digiToolsPromise, setTotalCount, totalCount }) => {
           selectedProduct={selectedProduct}
           setTotalCount={setTotalCount}
           totalCount={totalCount}
+          selectedTools={selectedTools}
+          setSelectedTools={setSelectedTools}
+          key={digiTools.id}
         ></DigiTools>
       ) : (
-        <SelectedCart></SelectedCart>
+        <SelectedCart digiTools={digiTools} selectedTools={selectedTools}></SelectedCart>
       )}
     </div>
   );
