@@ -1,16 +1,31 @@
 import React, { use, useState } from "react";
 import DigiTools from "./DigiTools";
 import SelectedCart from "./SelectedCart";
+import { toast } from "react-toastify";
+import Empty from "./Empty";
 
-const MainSection = ({ digiToolsPromise, setTotalCount, totalCount }) => {
+const MainSection = ({
+  digiToolsPromise,
+  selectedTools,
+  setSelectedTools,
+  setTotalCount,
+  totalCount,
+}) => {
   const digiTools = use(digiToolsPromise);
 
   const [selectedProduct, setSelectedProduct] = useState("product");
-  const [selectedTools, setSelectedTools] = useState([]);
+
   // console.log(selectedProduct, "SelectedProduct");
   const handleRemoveButton = (id) => {
     const remove = selectedTools.filter((tool) => tool.id !== id);
     setSelectedTools(remove);
+    setTotalCount(remove.length);
+    toast(`One item is removed`);
+  };
+  const handleClearsAllCartItems = () => {
+    toast("All items removed");
+    setSelectedTools([]);
+    setTotalCount(0);
   };
   return (
     <div>
@@ -56,11 +71,14 @@ const MainSection = ({ digiToolsPromise, setTotalCount, totalCount }) => {
           setSelectedTools={setSelectedTools}
           key={digiTools.id}
         ></DigiTools>
+      ) : selectedTools.length === 0 ? (
+        <Empty></Empty>
       ) : (
         <SelectedCart
           digiTools={digiTools}
           selectedTools={selectedTools}
           handleRemoveButton={handleRemoveButton}
+          handleClearsAllCartItems={handleClearsAllCartItems}
         ></SelectedCart>
       )}
     </div>

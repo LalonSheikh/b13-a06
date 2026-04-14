@@ -25,7 +25,11 @@ const icons = {
   FaCloud,
 };
 
-const SelectedCart = ({ selectedTools, handleRemoveButton }) => {
+const SelectedCart = ({
+  selectedTools,
+  handleRemoveButton,
+  handleClearsAllCartItems,
+}) => {
   const totalPrice = selectedTools.reduce((total, tool) => {
     return total + Number(tool.price);
   }, 0);
@@ -64,7 +68,10 @@ const SelectedCart = ({ selectedTools, handleRemoveButton }) => {
         <p>${totalPrice.toFixed(2)}</p>
       </div>
       <div className="mt-6">
-        <button className="btn bg-[#4F39F6] text-white rounded-2xl btn-block">
+        <button
+          onClick={handleClearsAllCartItems}
+          className="btn bg-[#4F39F6] text-white rounded-2xl btn-block"
+        >
           Proceed To Checkout
         </button>
       </div>

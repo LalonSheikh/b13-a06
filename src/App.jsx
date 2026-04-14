@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Pricing from "./components/price/Pricing";
 import Stats from "./components/stats/Stats";
 import Steps from "./components/steps/Steps";
+import { ToastContainer } from "react-toastify";
 
 const fetchDigiTools = async () => {
   const res = await fetch("/data.json");
@@ -15,7 +16,13 @@ const fetchDigiTools = async () => {
 
 function App() {
   const digiToolsPromise = fetchDigiTools();
+  const [selectedTools, setSelectedTools] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
+
+//
+
+
+
   return (
     <>
       <Suspense
@@ -28,11 +35,14 @@ function App() {
           setTotalCount={setTotalCount}
           totalCount={totalCount}
           digiToolsPromise={digiToolsPromise}
+          selectedTools={selectedTools}
+          setSelectedTools={setSelectedTools}
         ></MainSection>
         <Steps></Steps>
         <Pricing></Pricing>
         <Footer></Footer>
       </Suspense>
+       <ToastContainer />
     </>
   );
 }

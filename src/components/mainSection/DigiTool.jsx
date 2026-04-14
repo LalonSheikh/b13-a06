@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const DigiTool = ({
   digiTool,
@@ -13,7 +14,7 @@ const DigiTool = ({
   console.log(totalCount);
 
   const handleSetTool = () => {
-    alert(`${digiTool.name} is selected`);
+    toast(`${digiTool.name} is selected`);
     setIsSelected(true);
     setTotalCount((prev) => prev + 1);
     // setTotalCount(+5);
