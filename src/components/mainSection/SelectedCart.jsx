@@ -25,7 +25,7 @@ const icons = {
   FaCloud,
 };
 
-const SelectedCart = ({ selectedTools }) => {
+const SelectedCart = ({ selectedTools, handleRemoveButton }) => {
   const totalPrice = selectedTools.reduce((total, tool) => {
     return total + Number(tool.price);
   }, 0);
@@ -49,7 +49,12 @@ const SelectedCart = ({ selectedTools }) => {
                   <p>${tool.price}</p>
                 </div>
               </div>
-              <button className="text-red-500">Remove</button>
+              <button
+                onClick={() => handleRemoveButton(tool.id)}
+                className="text-red-500 cursor-pointer"
+              >
+                Remove
+              </button>
             </div>
           );
         })}

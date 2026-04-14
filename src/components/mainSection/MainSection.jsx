@@ -8,6 +8,10 @@ const MainSection = ({ digiToolsPromise, setTotalCount, totalCount }) => {
   const [selectedProduct, setSelectedProduct] = useState("product");
   const [selectedTools, setSelectedTools] = useState([]);
   // console.log(selectedProduct, "SelectedProduct");
+  const handleRemoveButton = (id) => {
+    const remove = selectedTools.filter((tool) => tool.id !== id);
+    setSelectedTools(remove);
+  };
   return (
     <div>
       <div className="flex justify-center items-center container  mx-auto my-[50px] font-sans">
@@ -53,7 +57,11 @@ const MainSection = ({ digiToolsPromise, setTotalCount, totalCount }) => {
           key={digiTools.id}
         ></DigiTools>
       ) : (
-        <SelectedCart digiTools={digiTools} selectedTools={selectedTools}></SelectedCart>
+        <SelectedCart
+          digiTools={digiTools}
+          selectedTools={selectedTools}
+          handleRemoveButton={handleRemoveButton}
+        ></SelectedCart>
       )}
     </div>
   );
